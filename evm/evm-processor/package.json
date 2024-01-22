@@ -1,9 +1,12 @@
 {
-  "name": "@subsquid/evm-processor",
+  "name": "@cicadabdex/evm-processor-cicada-patch",
   "version": "1.13.0",
-  "description": "Data fetcher and mappings executor for EVM-based chains",
+  "description": "Data fetcher and mappings executor for EVM-based chains, patched by Cicada for Telos",
   "license": "GPL-3.0-or-later",
-  "repository": "git@github.com:subsquid/squid.git",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/CicadaNCR/squid-sdk/evm/evm-processor.git"
+  },
   "publishConfig": {
     "access": "public",
     "registry": "https://registry.npmjs.org/"
