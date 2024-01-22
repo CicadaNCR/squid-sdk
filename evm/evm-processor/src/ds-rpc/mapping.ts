@@ -49,6 +49,11 @@ export function mapBlock(rpcBlock: RpcBlock, req: MappingRequest): Block {
 
 
 function tryMapBlock(rpcBlock: RpcBlock, req: MappingRequest): Block {
+    if (rpcBlock.logs != undefined) {
+        for (let i = 0; i < rpcBlock.logs.length; i++) {
+            rpcBlock.logs[i].address = rpcBlock.logs[i].address.toLowerCase();
+        }
+    }
     let src = cast(getBlockValidator(req), rpcBlock)
 
     let {number, hash, parentHash, transactions, ...headerProps} = src.block
